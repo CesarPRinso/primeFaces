@@ -29,7 +29,7 @@
             <c:forEach items="#{categoriaBean.categorias}" var="cat">			
                 <p:commandButton value="#{cat.descripcion}"
                                  actionListener="${categoriaBean.cargarProductos(cat.id)}"
-                                 update=":form:dgCategorias" />
+                                 update=":form:dgCategorias" /> 
             </c:forEach>
 
             <p:dataGrid var="producto" value="#{categoriaBean.productos}"
@@ -37,7 +37,7 @@
                 <p:column>
                     <p:panel>
                         <h:panelGrid columns="1" class ="full">
-                            <p:graphicImage value="http://trabalibros.com/rs/1152/e9c4455d-a317-4f4c-9f70-108d736bae98/78f/filename/hollywood-bukowski-trabalibros.jpg" />
+                            <p:graphicImage value="http://trabalibros.com/rs/1152/e9c4455d-a317-4f4c-9f70-108d736bae98/78f/filename/hollywood-bukowski-trabalibros.jpg" width="200px" />
                             <h:outputText value="#{producto.nombre}" class="titulo" />
                             <h:outputText value="#{producto.descripcion}" />
                         </h:panelGrid>
